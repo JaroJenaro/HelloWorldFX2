@@ -1,5 +1,6 @@
 package de.iav.helloworld.spaceBuilder;
 
+import de.iav.helloworld.model.Student;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -31,6 +32,9 @@ public class SpaceBilderController {
     }
 
     public void getStudenten() {
+        Student student = new Student(e_firstName.getText(), e_lastName.getText(), e_email.getText(), lv_ListView.getItems());
         System.out.println("hier ist der Student: " + e_firstName.getText()  + " " + e_lastName.getText()  + " " + e_email.getText() + " " +  lv_ListView.getItems());
+
+        System.out.println("hier ist der Student als record: " + student);
     }
 }
