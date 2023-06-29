@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #00ff00;"
+            xmlns="http://javafx.com/javafx/20.0"
+            xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Ellipse fill="#1fffa8" layoutX="366.0" layoutY="286.0" radiusX="100.0" radiusY="80.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="DODGERBLUE" layoutX="466.0" layoutY="128.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#efff1f" height="200.0" layoutX="166.0" layoutY="67.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <TextField layoutX="38.0" layoutY="42.0" />
+      <TextField layoutX="38.0" layoutY="90.0" />
+      <TextField layoutX="38.0" layoutY="142.0" />
+      <Label layoutX="236.0" layoutY="46.0" text="firstName" />
+      <Label layoutX="225.0" layoutY="94.0" text="lastName" />
+      <Label layoutX="225.0" layoutY="146.0" text="email" />
+      <Label layoutX="275.0" layoutY="198.0" text="CourseOfStudies" />
+      <Label layoutX="51.0" layoutY="14.0" text="Studentenregistrierungsformular" />
+      <ListView layoutX="38.0" layoutY="187.0" prefHeight="122.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>
