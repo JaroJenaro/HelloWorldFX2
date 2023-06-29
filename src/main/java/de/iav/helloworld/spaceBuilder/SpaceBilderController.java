@@ -37,4 +37,12 @@ public class SpaceBilderController {
 
         System.out.println("hier ist der Student als record: " + student);
     }
+
+    public void clearForm() {
+        e_firstName.clear();
+        e_lastName.clear();
+        e_email.clear();
+        lv_ListView.getItems().clear();
+
+    }
 }

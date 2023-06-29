@@ -20,7 +20,7 @@
       <Label layoutX="51.0" layoutY="134.0" text="email" />
       <Label layoutX="33.0" layoutY="231.0" text="CourseOfStudies" />
       <Label layoutX="51.0" layoutY="14.0" text="Studentenregistrierungsformular" />
-      <ListView fx:id="lv_ListView" layoutX="174.0" layoutY="216.0" prefHeight="122.0" prefWidth="200.0">
+      <ListView fx:id="lv_ListView" layoutX="174.0" layoutY="216.0" prefHeight="83.0" prefWidth="200.0">
 
       </ListView>
       <ComboBox fx:id="comboBox" layoutX="174.0" layoutY="167.0" prefWidth="150.0">
@@ -35,6 +35,7 @@
       <Label layoutX="36.0" layoutY="171.0" text="choice course" />
       <Button fx:id="b_courseUpdate" layoutX="374.0" layoutY="167.0" mnemonicParsing="false" onAction="#curseUpdate" text="cours update" />
       <CheckBox layoutX="25.0" layoutY="358.0" mnemonicParsing="false" text="CheckBox" />
-      <Button fx:id="b_getStudent" layoutX="174.0" layoutY="354.0" mnemonicParsing="false" onAction="#getStudenten" text="Gebe Studenten in der Konsole aus" />
+      <Button fx:id="b_getStudent" layoutX="170.0" layoutY="314.0" mnemonicParsing="false" onAction="#getStudenten" text="Gebe Studenten in der Konsole aus" />
+      <Button fx:id="b_clear" layoutX="170.0" layoutY="346.0" mnemonicParsing="false" onAction="#clearForm" text="Clear" />
    </children>
 </AnchorPane>
