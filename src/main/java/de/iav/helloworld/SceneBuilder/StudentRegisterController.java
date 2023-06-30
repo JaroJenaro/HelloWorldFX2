@@ -112,7 +112,7 @@ public class StudentRegisterController {
         root = loader.load();
 
         Student student = new Student(SecureRandomString.generate(), e_firstName.getText(), e_lastName.getText(), e_email.getText(), lv_ListView.getItems());
-        ListOfStudentsontroller listOfStudentsController = loader.getController();
+        ListOfStudentsController listOfStudentsController = loader.getController();
 
         listOfStudentsController.addStudentInTheList(student, studentList);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -141,7 +141,7 @@ public class StudentRegisterController {
         root = loader.load();
 
         Student student = new Student(e_secureID.getText(), e_firstName.getText(), e_lastName.getText(), e_email.getText(), lv_ListView.getItems());
-        ListOfStudentsontroller listOfStudentsController = loader.getController();
+        ListOfStudentsController listOfStudentsController = loader.getController();
 
         listOfStudentsController.updateStudentInTheList(student, studentList);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
