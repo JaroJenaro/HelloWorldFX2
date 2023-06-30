@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <DialogPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="480.0"
-            fx:controller="de.iav.helloworld.spaceBuilder.SpaceBilderController"
+            fx:controller="de.iav.helloworld.SceneBuilder.SceneBuilderController"
             xmlns="http://javafx.com/javafx/20.0.1"
             xmlns:fx="http://javafx.com/fxml/1">
     <header>

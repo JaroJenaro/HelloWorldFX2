@@ -1,4 +1,4 @@
-package de.iav.helloworld.spaceBuilder;
+package de.iav.helloworld.SceneBuilder;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -8,12 +8,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class SpaceBuilder extends Application {
+public class SceneBuilderApplication extends Application {
     public void start(Stage stage) throws IOException {
 
         //System.out.println(SpaceBuilder.class.getResource("/de/iav/helloworld/Aufgabe1SceneBuilderBunt.fxml"));
         //FXMLLoader fxmlLoader = new FXMLLoader(SpaceBuilder.class.getResource("/de/iav/helloworld/Aufgabe1SceneBuilderBunt.fxml"));
-        FXMLLoader fxmlLoader = new FXMLLoader(SpaceBuilder.class.getResource("/de/iav/helloworld/StudentenRegister.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(SceneBuilderApplication.class
+                .getResource("/de/iav/helloworld/StudentenRegister.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 500, 500);
 
 

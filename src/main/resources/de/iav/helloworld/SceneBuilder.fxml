@@ -10,12 +10,13 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="606.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.iav.helloworld.SceneBuilder.StudentRegisterController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="606.0" style="-fx-background-color: lightgrey;"
+            xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.iav.helloworld.SceneBuilder.SceneBuilderController">
    <children>
-      <TextField fx:id="e_firstName" layoutX="170.0" layoutY="62.0" />
+      <TextField fx:id="e_firstName" layoutX="174.0" layoutY="48.0" />
       <TextField fx:id="e_lastName" layoutX="174.0" layoutY="90.0" />
       <TextField fx:id="e_email" layoutX="174.0" layoutY="130.0" />
-      <Label fx:id="welcomeText" layoutX="38.0" layoutY="66.0" text="firstName" />
+      <Label fx:id="welcomeText" layoutX="38.0" layoutY="43.0" text="firstName" />
       <Label layoutX="39.0" layoutY="94.0" text="lastName" />
       <Label layoutX="51.0" layoutY="134.0" text="email" />
       <Label layoutX="33.0" layoutY="231.0" text="CourseOfStudies" />
@@ -35,13 +36,10 @@
       <Label layoutX="36.0" layoutY="171.0" text="choice course" />
       <Button fx:id="b_courseUpdate" layoutX="374.0" layoutY="167.0" mnemonicParsing="false" onAction="#curseUpdate" text="cours update" />
       <CheckBox layoutX="25.0" layoutY="358.0" mnemonicParsing="false" text="CheckBox" />
-      <Button fx:id="b_getStudent" layoutX="170.0" layoutY="314.0" mnemonicParsing="false" onAction="#switchToScene3" text="registrieren" />
+      <Button fx:id="b_getStudent" layoutX="170.0" layoutY="314.0" mnemonicParsing="false" onAction="#getStudenten" text="Gebe Studenten in der Konsole aus" />
       <Button fx:id="b_clear" layoutX="170.0" layoutY="346.0" mnemonicParsing="false" onAction="#clearForm" text="Clear" />
       <TextField fx:id="tf_showInLabel" layoutX="47.0" layoutY="403.0" />
       <Label fx:id="l_viewTextField" layoutX="288.0" layoutY="407.0" />
       <Label fx:id="l_errorMessage" layoutX="50.0" layoutY="442.0" />
-      <Button fx:id="b_getBackToWelcome" layoutX="53.0" layoutY="438.0" mnemonicParsing="false" onAction="#switchToScene1" text="zurück zur welcomeAnsicht" />
-      <Label layoutX="40.0" layoutY="37.0" text="ID:" />
-      <TextField fx:id="e_Uuid" disable="true" layoutX="59.0" layoutY="33.0" />
    </children>
 </AnchorPane>

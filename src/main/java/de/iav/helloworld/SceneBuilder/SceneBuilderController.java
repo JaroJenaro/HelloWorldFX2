@@ -1,4 +1,4 @@
-package de.iav.helloworld.spaceBuilder;
+package de.iav.helloworld.SceneBuilder;
 
 import de.iav.helloworld.model.Student;
 import javafx.animation.Animation;
@@ -6,14 +6,13 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.util.Duration;
 
-public class SpaceBilderController {
+import java.util.UUID;
+
+public class SceneBuilderController {
     @FXML
     public ListView lv_ListView;
     @FXML
@@ -54,7 +53,7 @@ public class SpaceBilderController {
     }
 */
     public void initialize() {
-        System.out.println("This method is executed on initialization of the controller");
+        System.out.println("Scene Builder This method is executed on initialization of the controller");
         //label.textProperty().bind(textField.textProperty());
         // oder
         tf_showInLabel.textProperty().addListener((observable, oldValue, newValue) -> {
@@ -93,7 +92,7 @@ public class SpaceBilderController {
     }
 
     public void getStudenten() {
-        Student student = new Student(e_firstName.getText(), e_lastName.getText(), e_email.getText(), lv_ListView.getItems());
+        Student student = new Student(UUID.randomUUID(), e_firstName.getText(), e_lastName.getText(), e_email.getText(), lv_ListView.getItems());
         System.out.println("hier ist der Student: " + e_firstName.getText()  + " " + e_lastName.getText()  + " " + e_email.getText() + " " +  lv_ListView.getItems());
 
         System.out.println("hier ist der Student als record: " + student);
