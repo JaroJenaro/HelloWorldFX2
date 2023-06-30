@@ -117,14 +117,9 @@ public class ListOfStudentsController {
 
         System.out.println(fromRegisterStudent);
         // Fügt initiale Elemente zur Liste hinzu
-        List<Student> newListStudents = students;
-        for (Student student: newListStudents
-             ) {
-            if(student.secureID().equals(fromRegisterStudent.secureID()))
-                newListStudents.remove(student);
-        }
-        newListStudents.add(fromRegisterStudent);
-        lv_ListViewOfStudents.getItems().addAll(newListStudents);
+        students.removeIf(student -> student.secureID().equals(fromRegisterStudent.secureID()));
+        students.add(fromRegisterStudent);
+        lv_ListViewOfStudents.getItems().addAll(students);
 
 
         /*

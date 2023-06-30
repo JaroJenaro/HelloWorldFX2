@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b57b8f6-8781-44cf-9a29-01b098e070f0" name="Changes" comment="Aufgabe SceneWechsel und ListView soweit funktionsfähig">
+    <list default="true" id="8b57b8f6-8781-44cf-9a29-01b098e070f0" name="Changes" comment="Warnings ausbauen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/iav/helloworld/SceneBuilder/ListOfStudentsontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/iav/helloworld/SceneBuilder/ListOfStudentsontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/iav/helloworld/SceneBuilder/StudentRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/iav/helloworld/SceneBuilder/StudentRegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/de/iav/helloworld/ListOfStudents.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/de/iav/helloworld/ListOfStudents.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/de/iav/helloworld/StudentenRegister.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/de/iav/helloworld/StudentenRegister.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/iav/helloworld/SceneBuilder/ListOfStudentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/iav/helloworld/SceneBuilder/ListOfStudentsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/de/iav/helloworld/SceneBuilder.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/de/iav/helloworld/SceneBuilder.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/de/iav/helloworld/test.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/de/iav/helloworld/test.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,28 +29,32 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2RpMGkyveXpd8t5amQwFkC6Ibls" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/jaroslawplaczek/IdeaProjects/HelloWorld/src/main/resources/de/iav/helloworld&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/jaroslawplaczek/IdeaProjects/HelloWorld/src/main/resources/de/iav/helloworld",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.JavaFX",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/de/iav/helloworld" />
@@ -107,7 +113,7 @@
       <updated>1687942476277</updated>
       <workItem from="1687942477551" duration="31921000" />
       <workItem from="1688112958429" duration="14793000" />
-      <workItem from="1688128952294" duration="14719000" />
+      <workItem from="1688128952294" duration="21538000" />
     </task>
     <task id="LOCAL-00001" summary="initial Commit">
       <created>1688025604364</created>
@@ -151,7 +157,28 @@
       <option name="project" value="LOCAL" />
       <updated>1688129940779</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="automatische Generierung von Studenten, wechseln Zur Registercard ohne selektierung">
+      <created>1688148786448</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1688148786448</updated>
+    </task>
+    <task id="LOCAL-00008" summary="secureID statt UUID">
+      <created>1688165255303</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1688165255303</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Warnings ausbauen">
+      <created>1688165502730</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1688165502730</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +202,9 @@
     <MESSAGE value="clearForm() implementiert 2" />
     <MESSAGE value=".gitignore aktualisiert" />
     <MESSAGE value="Aufgabe SceneWechsel und ListView soweit funktionsfähig" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aufgabe SceneWechsel und ListView soweit funktionsfähig" />
+    <MESSAGE value="automatische Generierung von Studenten, wechseln Zur Registercard ohne selektierung" />
+    <MESSAGE value="secureID statt UUID" />
+    <MESSAGE value="Warnings ausbauen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Warnings ausbauen" />
   </component>
 </project>

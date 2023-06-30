@@ -12,7 +12,6 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="606.0" style="-fx-background-color: lightgrey;"
             xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.iav.helloworld.SceneBuilder.SceneBuilderController">
-   <children>
       <TextField fx:id="e_firstName" layoutX="174.0" layoutY="48.0" />
       <TextField fx:id="e_lastName" layoutX="174.0" layoutY="90.0" />
       <TextField fx:id="e_email" layoutX="174.0" layoutY="130.0" />
@@ -34,12 +33,11 @@
          </items>
       </ComboBox>
       <Label layoutX="36.0" layoutY="171.0" text="choice course" />
-      <Button fx:id="b_courseUpdate" layoutX="374.0" layoutY="167.0" mnemonicParsing="false" onAction="#curseUpdate" text="cours update" />
+      <Button layoutX="374.0" layoutY="167.0" mnemonicParsing="false" onAction="#curseUpdate" text="cours update" />
       <CheckBox layoutX="25.0" layoutY="358.0" mnemonicParsing="false" text="CheckBox" />
-      <Button fx:id="b_getStudent" layoutX="170.0" layoutY="314.0" mnemonicParsing="false" onAction="#getStudenten" text="Gebe Studenten in der Konsole aus" />
-      <Button fx:id="b_clear" layoutX="170.0" layoutY="346.0" mnemonicParsing="false" onAction="#clearForm" text="Clear" />
+      <Button layoutX="170.0" layoutY="314.0" mnemonicParsing="false" onAction="#getStudenten" text="Gebe Studenten in der Konsole aus" />
+      <Button layoutX="170.0" layoutY="346.0" mnemonicParsing="false" onAction="#clearForm" text="Clear" />
       <TextField fx:id="tf_showInLabel" layoutX="47.0" layoutY="403.0" />
       <Label fx:id="l_viewTextField" layoutX="288.0" layoutY="407.0" />
       <Label fx:id="l_errorMessage" layoutX="50.0" layoutY="442.0" />
-   </children>
 </AnchorPane>

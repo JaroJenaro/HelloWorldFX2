@@ -10,9 +10,8 @@
             xmlns:fx="http://javafx.com/fxml/1">
     <header>
       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0">
-         <children>
             <Button layoutX="266.0" layoutY="143.0" mnemonicParsing="false" text="Button" />
-         </children></AnchorPane>
+      </AnchorPane>
     </header>
     <content>
       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0" />
