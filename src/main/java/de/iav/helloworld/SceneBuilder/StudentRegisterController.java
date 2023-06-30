@@ -1,5 +1,6 @@
 package de.iav.helloworld.SceneBuilder;
 
+import de.iav.helloworld.model.SecureRandomString;
 import de.iav.helloworld.model.Student;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,9 +17,9 @@ import java.util.*;
 
 public class StudentRegisterController {
     @FXML
-    public ListView lv_ListView;
+    public ListView<String> lv_ListView;
     @FXML
-    public ComboBox comboBox;
+    public ComboBox<String> comboBox;
     @FXML
     public TextField e_email;
 
@@ -29,7 +30,7 @@ public class StudentRegisterController {
     @FXML
     public Label l_errorMessage;
     @FXML
-    public TextField e_Uuid;
+   public TextField e_secureID;
 
 
     @FXML
@@ -45,10 +46,10 @@ public class StudentRegisterController {
 
     //List<String> firstNamesList = new ArrayList<>(){"Erum", "frrf"};
     List<String> firstNamesList = new ArrayList<>(Arrays.asList("Erum", "Matthias", "Sergej", "Tobias", "Jaro", "Gerd", "Ziyang", "Muslim", "Marcell", "Houman", "Ziad", "Dirk"));
-    List<String> lastNamesList = new ArrayList<>(Arrays.asList("Schaukat", "Romankiewitsch", "Grilborzer", "Hengelbrock", "Placzek", "Lödige", "Song", "Kerem", "Dechant", "Mohammadi", "Laribi", "Dirk"));
+    List<String> lastNamesList = new ArrayList<>(Arrays.asList("Schaukat", "Romankiewitsch", "Grilborzer", "Hengelbrock", "Placzek", "Lödige", "Song", "Kerem", "Dechant", "Mohammadi", "Laribi", "Müller"));
     ObservableList<String> coursesList = FXCollections.observableArrayList("BioTechnology", "Computer Science", "Computer Networks", "Electrical Engineering", "Mechanical Engineering", "Aerospace Engineering", "Medical Ethics", "Clinical Skills", "Internal Medicine"," Surgery");
 
-    //List<String> mailsList = new ArrayList<>(Arrays.asList("Erum", "Matthias", "Sergej", "Tobias", "Jaro", "Gerd", "Ziyang", "Muslim", "Marcell", "Houmane", "Ziad", "Dirk"));
+    List<String> mailEndingList = new ArrayList<>(Arrays.asList("gmail.de", "gmx.de", "web.com", "yahoo.de", "onet.pl", "t-online.de", "education.org", "iav.de", "volkswagen.ru", "tesla.us", "toastmasters.com", "vodafone.de"));
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -76,7 +77,7 @@ public class StudentRegisterController {
     }
 
     public void getStudenten() {
-        Student student = new Student( UUID.randomUUID(), e_firstName.getText(), e_lastName.getText(), e_email.getText(), lv_ListView.getItems());
+        Student student = new Student(SecureRandomString.generate(), e_firstName.getText(), e_lastName.getText(), e_email.getText(), lv_ListView.getItems());
         System.out.println("hier ist der Student: " + e_firstName.getText()  + " " + e_lastName.getText()  + " " + e_email.getText() + " " +  lv_ListView.getItems());
 
         System.out.println("hier ist der Student als record: " + student);
@@ -88,7 +89,7 @@ public class StudentRegisterController {
         e_email.clear();
         lv_ListView.getItems().clear();
         tf_showInLabel.clear();
-        e_Uuid.clear();
+        e_secureID.clear();
     }
 
     @FXML
@@ -110,7 +111,7 @@ public class StudentRegisterController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/de/iav/helloworld/ListOfStudents.fxml"));
         root = loader.load();
 
-        Student student = new Student(UUID.randomUUID(), e_firstName.getText(), e_lastName.getText(), e_email.getText(), lv_ListView.getItems());
+        Student student = new Student(SecureRandomString.generate(), e_firstName.getText(), e_lastName.getText(), e_email.getText(), lv_ListView.getItems());
         ListOfStudentsontroller listOfStudentsController = loader.getController();
 
         listOfStudentsController.addStudentInTheList(student, studentList);
@@ -121,25 +122,25 @@ public class StudentRegisterController {
         stage.show();
     }
 
-    public void setStudentRegister(Student student, List<Student> studentListfromScene3
+    public void setStudentRegister(Student student, List<Student> studentListFromScene3
     ) {
         e_firstName.setText(student.firstName());
         e_lastName.setText(student.lastName());
         e_email.setText(student.email());
-        e_Uuid.setText(student.uuid().toString());
+        e_secureID.setText(student.secureID());
         lv_ListView.getItems().addAll(student.courseOfStudies());
-        studentList = studentListfromScene3;
+        studentList = studentListFromScene3;
     }
-    public void setStudentRegister(List<Student> studentListfromScene3) {
+    public void setStudentRegister(List<Student> studentListFromScene3) {
 
-        studentList = studentListfromScene3;
+        studentList = studentListFromScene3;
     }
 
     public void switchToScene3WithUpdate(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/de/iav/helloworld/ListOfStudents.fxml"));
         root = loader.load();
 
-        Student student = new Student(UUID.fromString(e_Uuid.getText()), e_firstName.getText(), e_lastName.getText(), e_email.getText(), lv_ListView.getItems());
+        Student student = new Student(e_secureID.getText(), e_firstName.getText(), e_lastName.getText(), e_email.getText(), lv_ListView.getItems());
         ListOfStudentsontroller listOfStudentsController = loader.getController();
 
         listOfStudentsController.updateStudentInTheList(student, studentList);
@@ -151,12 +152,9 @@ public class StudentRegisterController {
     }
 
     public void generateOneStudent(ActionEvent event) {
-
-
-
-
+        System.out.println("generateOneStudent");
         Student student = new Student(
-                UUID.randomUUID(),
+                SecureRandomString.generate(),
                 generateFirstName(),
                 generateLastName(),
                 generateEmail(),
@@ -165,7 +163,9 @@ public class StudentRegisterController {
         e_firstName.setText(student.firstName());
         e_lastName.setText(student.lastName());
         e_email.setText(student.email());
+        lv_ListView.getItems().clear();
         lv_ListView.getItems().addAll(student.courseOfStudies());
+        System.out.println(student);
 
 
 
@@ -197,23 +197,26 @@ public class StudentRegisterController {
         return randomNumber;
     }
     private String generateFirstName(){
-        return firstNamesList.get(getNumber(12));
+        System.out.println("generateFirstName");
+        return firstNamesList.get(getNumber(firstNamesList.size()-1));
+        //System.out.println("generateFirstName: ");
     }
 
     private String generateLastName(){
-        return lastNamesList.get(getNumber(12));
+        return lastNamesList.get(getNumber(lastNamesList.size()-1));
     }
     private String generateEmail(){
-        return firstNamesList.get(getNumber(12)) +"." +lastNamesList.get(getNumber(12)) +"@mail.de";
+        return firstNamesList.get(getNumber(firstNamesList.size()-1)) +"." + lastNamesList.get(getNumber(lastNamesList.size()-1)) +"@" + mailEndingList.get(getNumber(mailEndingList.size()-1));
     }
     private List<String> generateCoursesList(){
-
 
         int random = getNumber(1, 5);
         List<String> courses = new ArrayList<>();
         for (int i = 0; i < random; i++)
         {
-            courses.add(coursesList.get(getNumber(10)));
+            String randomCourse = coursesList.get(getNumber(coursesList.size()-1));
+            if(!courses.contains(randomCourse))
+                courses.add(randomCourse);
         }
         return courses;
     }

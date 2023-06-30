@@ -120,7 +120,7 @@ public class ListOfStudentsontroller {
         List<Student> newListStudents = students;
         for (Student student: newListStudents
              ) {
-            if(student.uuid().equals(fromRegisterStudent.uuid()))
+            if(student.secureID().equals(fromRegisterStudent.secureID()))
                 newListStudents.remove(student);
         }
         newListStudents.add(fromRegisterStudent);

@@ -1,9 +1,8 @@
 package de.iav.helloworld.model;
 
 import java.util.List;
-import java.util.UUID;
 
-public record Student(UUID uuid,
+public record Student(String secureID,
                       String firstName,
                       String lastName,
                       String email,
@@ -12,6 +11,6 @@ public record Student(UUID uuid,
     @Override
     public String toString()
     {
-        return uuid + ": " + firstName + " " + lastName + " " + courseOfStudies;
+        return secureID + ": " + firstName + " " + lastName + " " + courseOfStudies;
     }
 }

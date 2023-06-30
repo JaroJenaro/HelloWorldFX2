@@ -1,5 +1,6 @@
 package de.iav.helloworld.SceneBuilder;
 
+import de.iav.helloworld.model.SecureRandomString;
 import de.iav.helloworld.model.Student;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
@@ -10,13 +11,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.util.Duration;
 
-import java.util.UUID;
-
 public class SceneBuilderController {
     @FXML
-    public ListView lv_ListView;
+    public ListView<String> lv_ListView;
     @FXML
-    public ComboBox comboBox;
+    public ComboBox<String> comboBox;
     @FXML
     public TextField e_email;
 
@@ -30,28 +29,12 @@ public class SceneBuilderController {
 
     @FXML
     private Label welcomeText;
-    @FXML
-    private Button b_courseUpdate;
+
     @FXML
     private TextField e_firstName;
     @FXML
     private TextField e_lastName;
 
-/*
-    public void initialize() {
-        System.out.println("This method is executed on initialization of the controller");
-        //label.textProperty().bind(textField.textProperty());
-        // oder
-        tf_showInLabel.textProperty().addListener((observable, oldValue, newValue) -> {
-            if(newValue.length()>=3) {
-                l_viewTextField.setText(newValue);
-            }
-            else {l_viewTextField.setText("Länge 3 nicht erreicht");
-
-            }
-        });
-    }
-*/
     public void initialize() {
         System.out.println("Scene Builder This method is executed on initialization of the controller");
         //label.textProperty().bind(textField.textProperty());
@@ -92,7 +75,7 @@ public class SceneBuilderController {
     }
 
     public void getStudenten() {
-        Student student = new Student(UUID.randomUUID(), e_firstName.getText(), e_lastName.getText(), e_email.getText(), lv_ListView.getItems());
+        Student student = new Student(SecureRandomString.generate(), e_firstName.getText(), e_lastName.getText(), e_email.getText(), lv_ListView.getItems());
         System.out.println("hier ist der Student: " + e_firstName.getText()  + " " + e_lastName.getText()  + " " + e_email.getText() + " " +  lv_ListView.getItems());
 
         System.out.println("hier ist der Student als record: " + student);
