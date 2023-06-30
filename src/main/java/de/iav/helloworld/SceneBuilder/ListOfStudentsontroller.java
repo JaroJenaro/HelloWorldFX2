@@ -17,13 +17,7 @@ public class ListOfStudentsontroller {
 
 
 
-    @FXML
-    public TextField e_email;
 
-    @FXML
-    public TextField tf_showInLabel;
-    @FXML
-    public Label l_viewTextField;
     @FXML
     public ListView<Student> lv_ListViewOfStudents;
 
@@ -81,8 +75,11 @@ public class ListOfStudentsontroller {
         root = loader.load();
 
         StudentRegisterController studentRegisterController = loader.getController();
-
-        studentRegisterController.setStudentRegister(lv_ListViewOfStudents.getSelectionModel().getSelectedItem(), lv_ListViewOfStudents.getItems());
+        if (lv_ListViewOfStudents.getSelectionModel().getSelectedItem() != null)
+        {
+            studentRegisterController.setStudentRegister(lv_ListViewOfStudents.getSelectionModel().getSelectedItem(), lv_ListViewOfStudents.getItems());}
+        else
+            studentRegisterController.setStudentRegister(lv_ListViewOfStudents.getItems());
 
 
 
@@ -96,7 +93,7 @@ public class ListOfStudentsontroller {
         stage.show();
     }
 
-    public void setStudentInTheList(Student fromRegisterStudent, List<Student> students) {
+    public void addStudentInTheList(Student fromRegisterStudent, List<Student> students) {
 
         System.out.println(fromRegisterStudent);
         // Fügt initiale Elemente zur Liste hinzu
@@ -115,5 +112,37 @@ public class ListOfStudentsontroller {
         );
 
          */
+    }
+    public void updateStudentInTheList(Student fromRegisterStudent, List<Student> students) {
+
+        System.out.println(fromRegisterStudent);
+        // Fügt initiale Elemente zur Liste hinzu
+        List<Student> newListStudents = students;
+        for (Student student: newListStudents
+             ) {
+            if(student.uuid().equals(fromRegisterStudent.uuid()))
+                newListStudents.remove(student);
+        }
+        newListStudents.add(fromRegisterStudent);
+        lv_ListViewOfStudents.getItems().addAll(newListStudents);
+
+
+        /*
+        // Fügt ein Event-Handler hinzu, der den Button deaktiviert, wenn das Textfeld leer ist
+        textField.addEventHandler(EventType.ROOT, event -> {
+            addButton.setDisable(textField.getText().isEmpty());
+        });
+
+        // Fügt ein Event-Handler hinzu, der den Text des ausgewählten Elements in die Textansicht schreibt
+        listView.getSelectionModel().selectedItemProperty().addListener(
+                (observableValue, s, t1) -> text.setText(listView.getSelectionModel().getSelectedItem())
+        );
+
+         */
+    }
+
+    public void deleteSudentInTheList(ActionEvent event) {
+
+        lv_ListViewOfStudents.getItems().remove(lv_ListViewOfStudents.getSelectionModel().getSelectedItem());
     }
 }

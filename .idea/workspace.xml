@@ -4,23 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b57b8f6-8781-44cf-9a29-01b098e070f0" name="Changes" comment="clearForm() implementiert 2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/iav/helloworld/SceneBuilder/ListOfStudentsontroller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/iav/helloworld/SceneBuilder/StudentRegisterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/iav/helloworld/SceneBuilder/WelcomeApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/iav/helloworld/SceneBuilder/WelcomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/de/iav/helloworld/ListOfStudents.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/de/iav/helloworld/SceneBuilder.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/de/iav/helloworld/welcome.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="8b57b8f6-8781-44cf-9a29-01b098e070f0" name="Changes" comment="Aufgabe SceneWechsel und ListView soweit funktionsfähig">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/iav/helloworld/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/iav/helloworld/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/iav/helloworld/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/iav/helloworld/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/iav/helloworld/spaceBuilder/SpaceBilderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/iav/helloworld/SceneBuilder/SceneBuilderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/iav/helloworld/spaceBuilder/SpaceBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/iav/helloworld/SceneBuilder/SceneBuilderApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/iav/helloworld/SceneBuilder/ListOfStudentsontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/iav/helloworld/SceneBuilder/ListOfStudentsontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/iav/helloworld/SceneBuilder/StudentRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/iav/helloworld/SceneBuilder/StudentRegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/de/iav/helloworld/ListOfStudents.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/de/iav/helloworld/ListOfStudents.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/de/iav/helloworld/StudentenRegister.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/de/iav/helloworld/StudentenRegister.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/de/iav/helloworld/test.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/de/iav/helloworld/test.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +107,7 @@
       <updated>1687942476277</updated>
       <workItem from="1687942477551" duration="31921000" />
       <workItem from="1688112958429" duration="14793000" />
-      <workItem from="1688128952294" duration="791000" />
+      <workItem from="1688128952294" duration="14719000" />
     </task>
     <task id="LOCAL-00001" summary="initial Commit">
       <created>1688025604364</created>
@@ -148,7 +137,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688041046910</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary=".gitignore aktualisiert">
+      <created>1688129794852</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1688129794852</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Aufgabe SceneWechsel und ListView soweit funktionsfähig">
+      <created>1688129940779</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1688129940779</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +173,8 @@
     <MESSAGE value="record Student erstellt und mit ausgegeben" />
     <MESSAGE value="clearForm() implementiert" />
     <MESSAGE value="clearForm() implementiert 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="clearForm() implementiert 2" />
+    <MESSAGE value=".gitignore aktualisiert" />
+    <MESSAGE value="Aufgabe SceneWechsel und ListView soweit funktionsfähig" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aufgabe SceneWechsel und ListView soweit funktionsfähig" />
   </component>
 </project>
