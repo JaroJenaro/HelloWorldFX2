@@ -8,5 +8,6 @@ module de.iav.helloworld {
 
     exports de.iav.helloworld;
     exports de.iav.helloworld.SceneBuilder;
+    exports de.iav.helloworld.model;
 
 }

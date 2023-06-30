@@ -136,7 +136,7 @@ public class ListOfStudentsController {
          */
     }
 
-    public void deleteSudentInTheList(ActionEvent event) {
+    public void deleteSudentInTheList() {
 
         lv_ListViewOfStudents.getItems().remove(lv_ListViewOfStudents.getSelectionModel().getSelectedItem());
     }
